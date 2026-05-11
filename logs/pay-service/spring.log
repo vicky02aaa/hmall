@@ -1,0 +1,27 @@
+01:36:28:195  WARN 13072 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+01:36:28:195  WARN 13072 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+01:36:28:255  WARN 13072 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+01:36:28:264  WARN 13072 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+01:36:29:048  INFO 13072 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+01:36:29:068  INFO 13072 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+11:05:47:638  INFO 29436 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+11:05:47:859  INFO 29436 --- [main] com.hmall.pay.PayApplication             : Starting PayApplication using Java 17.0.9 on LAPTOP-vicky with PID 29436 (D:\codeJava\itheimaProjects\hmall\pay-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+11:05:47:860 DEBUG 29436 --- [main] com.hmall.pay.PayApplication             : Running with Spring Boot v2.7.18, Spring v5.3.31
+11:05:47:861  INFO 29436 --- [main] com.hmall.pay.PayApplication             : The following 1 profile is active: "local"
+11:05:49:383  INFO 29436 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0ff91c35-7d80-3088-a021-cff5f36c4a45
+11:05:49:943  INFO 29436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+11:05:49:960  INFO 29436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+11:05:49:961  INFO 29436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+11:05:50:241  INFO 29436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+11:05:50:241  INFO 29436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2302 ms
+11:05:50:580  INFO 29436 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+11:05:50:704  INFO 29436 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
+11:05:53:339  INFO 29436 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+11:05:54:440  INFO 29436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+11:05:54:519  INFO 29436 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+11:05:54:520  INFO 29436 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+11:05:56:811  INFO 29436 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.31.64:8086 register finished
+11:05:57:412  INFO 29436 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+11:05:57:418  INFO 29436 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+11:05:57:458  INFO 29436 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+11:05:57:614  INFO 29436 --- [main] com.hmall.pay.PayApplication             : Started PayApplication in 11.294 seconds (JVM running for 12.719)

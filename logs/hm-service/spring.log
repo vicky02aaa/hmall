@@ -1,0 +1,20 @@
+00:08:36:312  WARN 1448 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58m2s7ms673µs900ns).
+01:12:34:568  INFO 1448 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+01:12:42:347  INFO 1448 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+13:57:12:409  INFO 34884 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 17.0.9 on LAPTOP-vicky with PID 34884 (D:\codeJava\itheimaProjects\hmall\hm-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+13:57:12:412 DEBUG 34884 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.18, Spring v5.3.31
+13:57:12:413  INFO 34884 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+13:57:13:344  INFO 34884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+13:57:13:346  INFO 34884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:57:13:385  INFO 34884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+13:57:13:980  INFO 34884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+13:57:13:987  INFO 34884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+13:57:13:987  INFO 34884 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+13:57:14:112  INFO 34884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+13:57:14:112  INFO 34884 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1644 ms
+13:57:15:449  INFO 34884 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+13:57:15:872  INFO 34884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+13:57:15:873  INFO 34884 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+13:57:15:876  INFO 34884 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+13:57:15:908  INFO 34884 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+13:57:16:072  INFO 34884 --- [main] com.hmall.HMallApplication               : Started HMallApplication in 4.12 seconds (JVM running for 5.024)
