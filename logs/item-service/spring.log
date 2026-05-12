@@ -4720,3 +4720,248 @@ java.io.IOException: The server sockets created using the LocalRMIServerSocketFa
 18:23:43:570 DEBUG 22224 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
 18:23:43:570 DEBUG 22224 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
 18:23:43:570 DEBUG 5632 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+00:25:35:513  WARN 22224 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:25:35:513  WARN 22224 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:25:35:519  WARN 22224 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:25:35:523  WARN 22224 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:25:35:553  WARN 5632 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:25:35:553  WARN 5632 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:25:35:561  WARN 5632 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:25:35:565  WARN 5632 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:25:35:586  INFO 22224 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:25:35:610  INFO 5632 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:25:35:618  INFO 22224 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:25:35:622  INFO 5632 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:25:35:661  INFO 5632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+00:25:35:661  INFO 22224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+00:25:35:687  INFO 22224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+00:25:35:690  INFO 5632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+14:50:46:188  INFO 25720 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+14:50:46:378  INFO 25720 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.9 on LAPTOP-vicky with PID 25720 (D:\codeJava\itheimaProjects\hmall\item-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+14:50:46:378 DEBUG 25720 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+14:50:46:379  INFO 25720 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+14:50:47:942  INFO 25720 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb602fee-6fe8-3aa2-81df-1fdc423e8553
+14:50:48:655  INFO 25720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+14:50:48:672  INFO 25720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:50:48:672  INFO 25720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+14:50:48:930  INFO 25720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:50:48:931  INFO 25720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2487 ms
+14:50:51:471  INFO 25720 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:50:52:510  INFO 25720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+14:50:52:592  INFO 25720 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+14:50:52:593  INFO 25720 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+14:50:54:774  INFO 25720 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.64:8083 register finished
+14:50:55:450  INFO 25720 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:50:55:455  INFO 25720 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:50:55:501  INFO 25720 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:50:55:722  INFO 25720 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 10.823 seconds (JVM running for 12.25)
+14:51:04:175  INFO 49956 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+14:51:04:387  INFO 49956 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.9 on LAPTOP-vicky with PID 49956 (D:\codeJava\itheimaProjects\hmall\item-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+14:51:04:387 DEBUG 49956 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+14:51:04:387  INFO 49956 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+14:51:05:920  INFO 49956 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb602fee-6fe8-3aa2-81df-1fdc423e8553
+14:51:06:749  INFO 49956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+14:51:06:769  INFO 49956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:51:06:769  INFO 49956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+14:51:07:041  INFO 49956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:51:07:041  INFO 49956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2576 ms
+14:51:09:638  INFO 49956 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:51:10:612  INFO 49956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+14:51:10:668  INFO 49956 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+14:51:10:668  INFO 49956 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+14:51:12:347  INFO 49956 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.64:8081 register finished
+14:51:12:761  INFO 49956 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:51:12:766  INFO 49956 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:51:12:810  INFO 49956 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:51:13:012  INFO 49956 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 10.001 seconds (JVM running for 11.416)
+15:09:15:317  INFO 25720 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:09:15:317  INFO 25720 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:09:15:321  INFO 25720 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+15:09:15:481  INFO 25720 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:09:15:945  INFO 25720 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:09:15:958 DEBUG 25720 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:16:001 DEBUG 25720 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:16:063 DEBUG 25720 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:19:456  INFO 49956 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:09:19:456  INFO 49956 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:09:19:460  INFO 49956 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+15:09:19:630  INFO 49956 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:09:20:116  INFO 49956 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:09:20:129 DEBUG 49956 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:20:176 DEBUG 49956 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:20:232 DEBUG 49956 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:21:316 DEBUG 25720 --- [http-nio-8083-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:21:317 DEBUG 25720 --- [http-nio-8083-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:21:321 DEBUG 25720 --- [http-nio-8083-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:23:100 DEBUG 49956 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:23:102 DEBUG 49956 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:23:107 DEBUG 49956 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:24:363 DEBUG 25720 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:24:364 DEBUG 25720 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:24:368 DEBUG 25720 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:25:227 DEBUG 49956 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:25:227 DEBUG 49956 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:25:232 DEBUG 49956 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:25:929 DEBUG 25720 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:25:930 DEBUG 25720 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:25:938 DEBUG 25720 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:27:149 DEBUG 49956 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:27:150 DEBUG 49956 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:27:156 DEBUG 49956 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:09:28:752 DEBUG 25720 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:09:28:753 DEBUG 25720 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:09:28:756 DEBUG 25720 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:10:09:538 DEBUG 49956 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+15:10:09:539 DEBUG 49956 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 14741770661(Long), 100001905417(Long)
+15:10:09:542 DEBUG 49956 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+15:10:12:962 DEBUG 25720 --- [http-nio-8083-exec-6] c.h.i.m.ItemMapper.selectList_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+15:10:12:963 DEBUG 25720 --- [http-nio-8083-exec-6] c.h.i.m.ItemMapper.selectList_mpCount    : ==> Parameters: 1(Integer)
+15:10:13:004 DEBUG 25720 --- [http-nio-8083-exec-6] c.h.i.m.ItemMapper.selectList_mpCount    : <==      Total: 1
+15:10:13:013 DEBUG 25720 --- [http-nio-8083-exec-6] c.h.item.mapper.ItemMapper.selectList    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+15:10:13:015 DEBUG 25720 --- [http-nio-8083-exec-6] c.h.item.mapper.ItemMapper.selectList    : ==> Parameters: 1(Integer), 20(Long)
+15:10:13:026 DEBUG 25720 --- [http-nio-8083-exec-6] c.h.item.mapper.ItemMapper.selectList    : <==      Total: 20
+15:10:19:507 DEBUG 25720 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? , ? )
+15:10:19:507 DEBUG 25720 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 3995643(Long), 14741770661(Long), 100001905417(Long)
+15:10:19:510 DEBUG 25720 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 5
+15:10:21:869 DEBUG 49956 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? , ? )
+15:10:21:869 DEBUG 49956 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 3995643(Long), 14741770661(Long), 100001905417(Long)
+15:10:21:872 DEBUG 49956 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 5
+15:10:22:187 DEBUG 25720 --- [http-nio-8083-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? , ? )
+15:10:22:188 DEBUG 25720 --- [http-nio-8083-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 3995643(Long), 14741770661(Long), 100001905417(Long)
+15:10:22:191 DEBUG 25720 --- [http-nio-8083-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 5
+16:03:55:415  WARN 25720 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:03:55:415  WARN 25720 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:03:55:418  WARN 25720 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:03:55:418  WARN 25720 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:03:55:452  WARN 49956 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:03:55:452  WARN 49956 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:03:55:453  WARN 49956 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:03:55:456  WARN 49956 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:03:55:499  INFO 25720 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:03:55:505  INFO 25720 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:03:55:534  INFO 25720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:03:55:537  INFO 49956 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:03:55:548  INFO 49956 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:03:55:563  INFO 25720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:03:55:580  INFO 49956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:03:55:602  INFO 49956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:05:10:067  INFO 65612 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+16:05:10:303  INFO 65612 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.9 on LAPTOP-vicky with PID 65612 (D:\codeJava\itheimaProjects\hmall\item-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+16:05:10:304 DEBUG 65612 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+16:05:10:304  INFO 65612 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:05:11:984  INFO 65612 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb602fee-6fe8-3aa2-81df-1fdc423e8553
+16:05:12:886  INFO 65612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+16:05:12:905  INFO 65612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:05:12:906  INFO 65612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+16:05:13:225  INFO 65612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:05:13:226  INFO 65612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2853 ms
+16:05:16:061  INFO 65612 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:05:16:989  INFO 65612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+16:05:17:052  INFO 65612 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:05:17:052  INFO 65612 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:05:17:904  INFO 49232 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+16:05:18:118  INFO 49232 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.9 on LAPTOP-vicky with PID 49232 (D:\codeJava\itheimaProjects\hmall\item-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+16:05:18:118 DEBUG 49232 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+16:05:18:119  INFO 49232 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:05:19:078  INFO 65612 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.64:8083 register finished
+16:05:19:613  INFO 49232 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb602fee-6fe8-3aa2-81df-1fdc423e8553
+16:05:19:633  INFO 65612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:05:19:636  INFO 65612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:05:19:672  INFO 65612 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:05:19:830  INFO 65612 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 11.105 seconds (JVM running for 12.609)
+16:05:20:188  INFO 49232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+16:05:20:198  INFO 49232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:05:20:198  INFO 49232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+16:05:20:441  INFO 49232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:05:20:442  INFO 49232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2259 ms
+16:05:22:431  INFO 49232 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:05:23:031  INFO 49232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+16:05:23:099  INFO 49232 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:05:23:100  INFO 49232 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:05:24:395  INFO 49232 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.64:8081 register finished
+16:05:24:715  INFO 49232 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:05:24:718  INFO 49232 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:05:24:748  INFO 49232 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:05:24:895  INFO 49232 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 8.129 seconds (JVM running for 9.453)
+16:06:01:631  INFO 65612 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:06:01:632  INFO 65612 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:06:01:634  INFO 65612 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+16:06:01:775  INFO 65612 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:06:02:196  INFO 65612 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:06:02:206 DEBUG 65612 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? , ? )
+16:06:02:244 DEBUG 65612 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 3995643(Long), 14741770661(Long), 100001905417(Long)
+16:06:02:294 DEBUG 65612 --- [http-nio-8083-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 5
+16:06:05:193  INFO 49232 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:06:05:194  INFO 49232 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:06:05:195  INFO 49232 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+16:06:05:361  INFO 49232 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:06:05:793  INFO 49232 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:06:05:806 DEBUG 49232 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? , ? )
+16:06:05:856 DEBUG 49232 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 100000006163(Long), 3995643(Long), 14741770661(Long), 100001905417(Long)
+16:06:05:901 DEBUG 49232 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 5
+16:10:34:925  WARN 49232 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:10:34:925  WARN 49232 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:10:34:925  WARN 49232 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:10:34:926  WARN 49232 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:10:34:931  WARN 65612 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:10:34:931  WARN 65612 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:10:34:932  WARN 65612 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:10:34:932  WARN 65612 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:10:34:982  INFO 49232 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:10:34:985  INFO 65612 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:10:34:990  INFO 49232 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:10:34:994  INFO 65612 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:10:35:020  INFO 49232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:10:35:024  INFO 65612 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+16:10:35:045  INFO 49232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:10:35:048  INFO 65612 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+16:11:52:664  INFO 24340 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+16:11:52:865  INFO 24340 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.9 on LAPTOP-vicky with PID 24340 (D:\codeJava\itheimaProjects\hmall\item-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+16:11:52:866 DEBUG 24340 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+16:11:52:867  INFO 24340 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:11:54:556  INFO 24340 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb602fee-6fe8-3aa2-81df-1fdc423e8553
+16:11:55:502  INFO 24340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+16:11:55:523  INFO 24340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:11:55:523  INFO 24340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+16:11:55:798  INFO 24340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:11:55:798  INFO 24340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2847 ms
+16:11:56:311  INFO 33984 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+16:11:56:536  INFO 33984 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.9 on LAPTOP-vicky with PID 33984 (D:\codeJava\itheimaProjects\hmall\item-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+16:11:56:537 DEBUG 33984 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+16:11:56:538  INFO 33984 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+16:11:58:220  INFO 33984 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fb602fee-6fe8-3aa2-81df-1fdc423e8553
+16:11:58:460  INFO 24340 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:11:59:000  INFO 33984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+16:11:59:017  INFO 33984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:11:59:018  INFO 33984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+16:11:59:258  INFO 33984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:11:59:258  INFO 33984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2644 ms
+16:11:59:459  INFO 24340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+16:11:59:534  INFO 24340 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:11:59:534  INFO 24340 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:12:01:775  INFO 24340 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.64:8083 register finished
+16:12:02:158  INFO 33984 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:12:02:543  INFO 24340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:12:02:548  INFO 24340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:12:02:589  INFO 24340 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:12:02:772  INFO 24340 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 11.261 seconds (JVM running for 12.462)
+16:12:03:250  INFO 33984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+16:12:03:354  INFO 33984 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:12:03:354  INFO 33984 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:12:05:374  INFO 33984 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.64:8081 register finished
+16:12:05:920  INFO 33984 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:12:05:923  INFO 33984 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:12:05:952  INFO 33984 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:12:06:107  INFO 33984 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 10.998 seconds (JVM running for 12.354)
+16:37:59:138  WARN 24340 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:37:59:138  WARN 24340 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:37:59:139  WARN 24340 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:37:59:139  WARN 24340 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:37:59:148  WARN 33984 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:37:59:149  WARN 33984 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:37:59:147  WARN 33984 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:37:59:149  WARN 33984 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:37:59:207  INFO 24340 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:37:59:215  INFO 24340 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:37:59:217  INFO 33984 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:37:59:225  INFO 33984 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.

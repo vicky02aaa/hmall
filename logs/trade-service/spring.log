@@ -1,27 +1,87 @@
-01:36:28:194  WARN 54380 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-01:36:28:195  WARN 54380 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-01:36:28:243  WARN 54380 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-01:36:28:255  WARN 54380 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-01:36:28:739  INFO 54380 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-01:36:28:758  INFO 54380 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-11:05:31:541  INFO 51560 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-11:05:31:789  INFO 51560 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 17.0.9 on LAPTOP-vicky with PID 51560 (D:\codeJava\itheimaProjects\hmall\trade-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
-11:05:31:791 DEBUG 51560 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.18, Spring v5.3.31
-11:05:31:791  INFO 51560 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
-11:05:33:491  INFO 51560 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=863dde2f-df92-3d02-8819-d86ac3eb4b84
-11:05:34:254  INFO 51560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-11:05:34:269  INFO 51560 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-11:05:34:270  INFO 51560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-11:05:34:536  INFO 51560 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-11:05:34:537  INFO 51560 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2666 ms
-11:05:34:898  INFO 51560 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-11:05:35:535  INFO 51560 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
-11:05:37:715  INFO 51560 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-11:05:38:594  INFO 51560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-11:05:38:693  INFO 51560 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-11:05:38:693  INFO 51560 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-11:05:41:082  INFO 51560 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.31.64:8085 register finished
-11:05:41:763  INFO 51560 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-11:05:41:768  INFO 51560 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-11:05:41:800  INFO 51560 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-11:05:41:954  INFO 51560 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 11.473 seconds (JVM running for 12.933)
+00:25:35:559  WARN 51560 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:25:35:559  WARN 51560 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:25:35:638  WARN 51560 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:25:35:643  WARN 51560 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:25:35:823  INFO 51560 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:25:35:838  INFO 51560 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+14:50:42:242  INFO 16808 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+14:50:42:490  INFO 16808 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 17.0.9 on LAPTOP-vicky with PID 16808 (D:\codeJava\itheimaProjects\hmall\trade-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+14:50:42:491 DEBUG 16808 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.18, Spring v5.3.31
+14:50:42:491  INFO 16808 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+14:50:44:563  INFO 16808 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=863dde2f-df92-3d02-8819-d86ac3eb4b84
+14:50:45:455  INFO 16808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+14:50:45:475  INFO 16808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:50:45:475  INFO 16808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+14:50:45:752  INFO 16808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:50:45:752  INFO 16808 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3158 ms
+14:50:46:144  INFO 16808 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+14:50:46:721  INFO 16808 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+14:50:48:707  INFO 16808 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+14:50:49:582  INFO 16808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+14:50:49:656  INFO 16808 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+14:50:49:657  INFO 16808 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+14:50:51:988  INFO 16808 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.31.64:8085 register finished
+14:50:52:629  INFO 16808 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+14:50:52:633  INFO 16808 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+14:50:52:661  INFO 16808 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+14:50:52:801  INFO 16808 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 11.653 seconds (JVM running for 12.903)
+16:03:55:446  WARN 16808 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:03:55:446  WARN 16808 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:03:55:450  WARN 16808 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:03:55:452  WARN 16808 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:03:55:547  INFO 16808 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:03:55:553  INFO 16808 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:05:02:668  INFO 54128 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+16:05:02:881  INFO 54128 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 17.0.9 on LAPTOP-vicky with PID 54128 (D:\codeJava\itheimaProjects\hmall\trade-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+16:05:02:882 DEBUG 54128 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.18, Spring v5.3.31
+16:05:02:882  INFO 54128 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+16:05:04:590  INFO 54128 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=863dde2f-df92-3d02-8819-d86ac3eb4b84
+16:05:05:356  INFO 54128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+16:05:05:374  INFO 54128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:05:05:375  INFO 54128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+16:05:05:654  INFO 54128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:05:05:655  INFO 54128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2696 ms
+16:05:05:969  INFO 54128 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+16:05:06:674  INFO 54128 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+16:05:08:947  INFO 54128 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:05:09:976  INFO 54128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+16:05:10:077  INFO 54128 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:05:10:077  INFO 54128 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:05:12:332  INFO 54128 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.31.64:8085 register finished
+16:05:13:028  INFO 54128 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:05:13:033  INFO 54128 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:05:13:076  INFO 54128 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:05:13:243  INFO 54128 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 11.696 seconds (JVM running for 12.935)
+16:10:34:915  WARN 54128 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:10:34:915  WARN 54128 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:10:34:916  WARN 54128 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:10:34:916  WARN 54128 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:10:34:969  INFO 54128 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:10:34:976  INFO 54128 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+16:12:07:628  INFO 45484 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+16:12:07:845  INFO 45484 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 17.0.9 on LAPTOP-vicky with PID 45484 (D:\codeJava\itheimaProjects\hmall\trade-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+16:12:07:846 DEBUG 45484 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.18, Spring v5.3.31
+16:12:07:847  INFO 45484 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+16:12:09:565  INFO 45484 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=863dde2f-df92-3d02-8819-d86ac3eb4b84
+16:12:10:394  INFO 45484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+16:12:10:410  INFO 45484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:12:10:411  INFO 45484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+16:12:10:748  INFO 45484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:12:10:749  INFO 45484 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2812 ms
+16:12:11:300  INFO 45484 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+16:12:12:023  INFO 45484 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+16:12:14:467  INFO 45484 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:12:15:261  INFO 45484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+16:12:15:367  INFO 45484 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+16:12:15:367  INFO 45484 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+16:12:16:985  INFO 45484 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.31.64:8085 register finished
+16:12:17:565  INFO 45484 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:12:17:568  INFO 45484 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:12:17:591  INFO 45484 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:12:17:695  INFO 45484 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 11.42 seconds (JVM running for 12.697)
+16:37:59:145  WARN 45484 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+16:37:59:145  WARN 45484 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+16:37:59:145  WARN 45484 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+16:37:59:146  WARN 45484 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+16:37:59:203  INFO 45484 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+16:37:59:212  INFO 45484 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
