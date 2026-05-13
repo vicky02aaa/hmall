@@ -1,96 +1,36 @@
-00:25:35:529  WARN 4240 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-00:25:35:529  WARN 4240 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-00:25:35:538  WARN 4240 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-00:25:35:540  WARN 4240 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-00:25:35:595  INFO 4240 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-00:25:35:614  INFO 4240 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-00:25:35:657  INFO 4240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-00:25:35:683  INFO 4240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-14:50:49:926  INFO 44632 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-14:50:50:144  INFO 44632 --- [main] com.hmall.user.UserApplication           : Starting UserApplication using Java 17.0.9 on LAPTOP-vicky with PID 44632 (D:\codeJava\itheimaProjects\hmall\user-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
-14:50:50:145 DEBUG 44632 --- [main] com.hmall.user.UserApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
-14:50:50:146  INFO 44632 --- [main] com.hmall.user.UserApplication           : The following 1 profile is active: "local"
-14:50:51:642  INFO 44632 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da496b0e-4f77-3d37-8160-411450b94065
-14:50:52:235  INFO 44632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-14:50:52:248  INFO 44632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-14:50:52:249  INFO 44632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-14:50:52:513  INFO 44632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-14:50:52:514  INFO 44632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2288 ms
-14:50:55:946  INFO 44632 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-14:50:56:734  INFO 44632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-14:50:56:814  INFO 44632 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-14:50:56:814  INFO 44632 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-14:50:58:658  INFO 44632 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.31.64:8084 register finished
-14:50:59:145  INFO 44632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-14:50:59:148  INFO 44632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-14:50:59:168  INFO 44632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-14:50:59:257  INFO 44632 --- [main] com.hmall.user.UserApplication           : Started UserApplication in 10.43 seconds (JVM running for 11.62)
-15:09:12:425  INFO 44632 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-15:09:12:425  INFO 44632 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-15:09:12:427  INFO 44632 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-15:09:12:710  INFO 44632 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-15:09:13:209  INFO 44632 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-15:09:13:222 DEBUG 44632 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
-15:09:13:265 DEBUG 44632 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: jack(String)
-15:09:13:320 DEBUG 44632 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
-15:44:48:832 DEBUG 44632 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
-15:44:48:833 DEBUG 44632 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: jack(String)
-15:44:48:839 DEBUG 44632 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
-16:03:55:432  WARN 44632 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:03:55:432  WARN 44632 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:03:55:432  WARN 44632 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:03:55:433  WARN 44632 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:03:55:492  INFO 44632 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-16:03:55:498  INFO 44632 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-16:03:55:520  INFO 44632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-16:03:55:555  INFO 44632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-16:05:14:140  INFO 38516 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-16:05:14:384  INFO 38516 --- [main] com.hmall.user.UserApplication           : Starting UserApplication using Java 17.0.9 on LAPTOP-vicky with PID 38516 (D:\codeJava\itheimaProjects\hmall\user-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
-16:05:14:385 DEBUG 38516 --- [main] com.hmall.user.UserApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
-16:05:14:385  INFO 38516 --- [main] com.hmall.user.UserApplication           : The following 1 profile is active: "local"
-16:05:15:950  INFO 38516 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da496b0e-4f77-3d37-8160-411450b94065
-16:05:16:496  INFO 38516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-16:05:16:510  INFO 38516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:05:16:511  INFO 38516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:05:16:724  INFO 38516 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:05:16:725  INFO 38516 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2274 ms
-16:05:19:798  INFO 38516 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:05:20:446  INFO 38516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-16:05:20:505  INFO 38516 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-16:05:20:505  INFO 38516 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-16:05:22:022  INFO 38516 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.31.64:8084 register finished
-16:05:22:490  INFO 38516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:05:22:494  INFO 38516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:05:22:516  INFO 38516 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:05:22:614  INFO 38516 --- [main] com.hmall.user.UserApplication           : Started UserApplication in 9.713 seconds (JVM running for 11.099)
-16:10:34:942  WARN 38516 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:10:34:942  WARN 38516 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:10:34:943  WARN 38516 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:10:34:943  WARN 38516 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:10:34:992  INFO 38516 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-16:10:35:001  INFO 38516 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-16:12:03:814  INFO 51276 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
-16:12:04:020  INFO 51276 --- [main] com.hmall.user.UserApplication           : Starting UserApplication using Java 17.0.9 on LAPTOP-vicky with PID 51276 (D:\codeJava\itheimaProjects\hmall\user-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
-16:12:04:021 DEBUG 51276 --- [main] com.hmall.user.UserApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
-16:12:04:022  INFO 51276 --- [main] com.hmall.user.UserApplication           : The following 1 profile is active: "local"
-16:12:05:548  INFO 51276 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da496b0e-4f77-3d37-8160-411450b94065
-16:12:06:045  INFO 51276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-16:12:06:056  INFO 51276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:12:06:057  INFO 51276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:12:06:271  INFO 51276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:12:06:272  INFO 51276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2186 ms
-16:12:09:644  INFO 51276 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:12:10:604  INFO 51276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-16:12:10:685  INFO 51276 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-16:12:10:685  INFO 51276 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-16:12:13:596  INFO 51276 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.31.64:8084 register finished
-16:12:14:229  INFO 51276 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:12:14:234  INFO 51276 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:12:14:265  INFO 51276 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:12:14:418  INFO 51276 --- [main] com.hmall.user.UserApplication           : Started UserApplication in 11.818 seconds (JVM running for 13.171)
-16:37:59:127  WARN 51276 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:37:59:128  WARN 51276 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:37:59:128  WARN 51276 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:37:59:129  WARN 51276 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:37:59:193  INFO 51276 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-16:37:59:204  INFO 51276 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+08:51:58:912  INFO 25340 --- [main] c.a.n.client.env.SearchableProperties    : properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+08:51:59:153  INFO 25340 --- [main] com.hmall.user.UserApplication           : Starting UserApplication using Java 17.0.9 on LAPTOP-vicky with PID 25340 (D:\codeJava\itheimaProjects\hmall\user-service\target\classes started by Lenovo in D:\codeJava\itheimaProjects\hmall)
+08:51:59:154 DEBUG 25340 --- [main] com.hmall.user.UserApplication           : Running with Spring Boot v2.7.18, Spring v5.3.31
+08:51:59:155  INFO 25340 --- [main] com.hmall.user.UserApplication           : The following 1 profile is active: "local"
+08:52:00:468  INFO 25340 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da496b0e-4f77-3d37-8160-411450b94065
+08:52:00:908  INFO 25340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+08:52:00:921  INFO 25340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+08:52:00:921  INFO 25340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+08:52:01:126  INFO 25340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+08:52:01:126  INFO 25340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1898 ms
+08:52:03:523  INFO 25340 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+08:52:04:094  INFO 25340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+08:52:04:141  INFO 25340 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+08:52:04:141  INFO 25340 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+08:52:05:217  INFO 25340 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 192.168.31.64:8084 register finished
+08:52:05:453  INFO 25340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+08:52:05:455  INFO 25340 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+08:52:05:471  INFO 25340 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+08:52:05:545  INFO 25340 --- [main] com.hmall.user.UserApplication           : Started UserApplication in 7.704 seconds (JVM running for 8.981)
+17:03:51:328  INFO 25340 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:03:51:332  INFO 25340 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:03:51:345  INFO 25340 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+17:03:51:749  INFO 25340 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:03:52:283  INFO 25340 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:03:52:298 DEBUG 25340 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+17:03:52:311 DEBUG 25340 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+17:03:52:349 DEBUG 25340 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: jack(String)
+17:03:52:349 DEBUG 25340 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: jack(String)
+17:03:52:411 DEBUG 25340 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+17:03:52:411 DEBUG 25340 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+17:03:52:421 DEBUG 25340 --- [http-nio-8084-exec-3] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+17:03:52:421 DEBUG 25340 --- [http-nio-8084-exec-3] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: jack(String)
+17:03:52:423 DEBUG 25340 --- [http-nio-8084-exec-3] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+17:03:52:653 DEBUG 25340 --- [http-nio-8084-exec-7] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+17:03:52:654 DEBUG 25340 --- [http-nio-8084-exec-7] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: jack(String)
+17:03:52:656 DEBUG 25340 --- [http-nio-8084-exec-7] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1

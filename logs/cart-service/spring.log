@@ -1,784 +1,193 @@
-00:25:35:512  WARN 10832 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-00:25:35:512  WARN 10832 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-00:25:35:533  WARN 10832 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-00:25:35:535  WARN 10832 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-00:25:35:642  INFO 10832 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-00:25:35:653  INFO 10832 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-00:25:35:685  INFO 10832 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-00:25:35:706  INFO 10832 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-14:51:05:817  INFO 47372 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-14:51:07:279  INFO 47372 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=654e2655-3c00-3893-9990-eb268669a3a3
-14:51:08:350  INFO 47372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-14:51:08:369  INFO 47372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-14:51:08:370  INFO 47372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-14:51:08:629  INFO 47372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-14:51:08:629  INFO 47372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2793 ms
-14:51:09:022  INFO 47372 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-14:51:10:278  INFO 47372 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-14:51:11:725  INFO 47372 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-14:51:12:501  INFO 47372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-14:51:12:521  INFO 47372 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-14:51:12:521  INFO 47372 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-14:51:12:681  INFO 47372 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.31.64:8082 register finished
-14:51:13:198  INFO 47372 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-14:51:13:202  INFO 47372 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-14:51:13:238  INFO 47372 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-14:51:13:373  INFO 47372 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 12.421 seconds (JVM running for 13.618)
-14:51:13:395  INFO 47372 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
-14:51:13:399  INFO 47372 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
-14:51:13:400  INFO 47372 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
-15:09:14:020  INFO 47372 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-15:09:14:021  INFO 47372 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-15:09:14:025  INFO 47372 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-15:09:14:480  INFO 47372 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-15:09:14:858  INFO 47372 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-15:09:14:869 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:14:904 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:14:943 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:15:021 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:15:021 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:15:021 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:16:191 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (1168ms)
-15:09:16:191 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:16:191 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:16:192 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:16 GMT
-15:09:16:192 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:16:192 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:16:192 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:16:193 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:16:194 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:19:339 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:19:340 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:19:348 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:19:351 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:19:352 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:19:352 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (991ms)
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:20 GMT
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:20:344 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:20:345 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:20:346 DEBUG 47372 --- [http-nio-8082-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:21:300 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:21:301 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:21:307 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:21:309 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:21:309 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:21:309 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (16ms)
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:21 GMT
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:21:326 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:21:327 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:23:033 DEBUG 47372 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:09:23:033 DEBUG 47372 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 4(Integer), 13(Long)
-15:09:23:056 DEBUG 47372 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:09:23:079 DEBUG 47372 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:23:079 DEBUG 47372 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:23:087 DEBUG 47372 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:23:094 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:23:094 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:23:094 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (15ms)
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:23 GMT
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:23:111 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:23:112 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:24:322 DEBUG 47372 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:09:24:323 DEBUG 47372 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 3(Integer), 13(Long)
-15:09:24:331 DEBUG 47372 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:09:24:353 DEBUG 47372 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:24:353 DEBUG 47372 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:24:356 DEBUG 47372 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:24:358 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:24:358 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:24:358 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:24:372 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (13ms)
-15:09:24:372 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:24:372 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:24:373 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:24 GMT
-15:09:24:373 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:24:373 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:24:373 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:24:373 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:24:373 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:25:192 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:09:25:192 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 3(Integer), 12(Long)
-15:09:25:197 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:09:25:216 DEBUG 47372 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:25:216 DEBUG 47372 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:25:220 DEBUG 47372 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:25:221 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:25:221 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:25:221 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:25:236 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (15ms)
-15:09:25:236 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:25:236 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:25:236 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:25 GMT
-15:09:25:236 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:25:237 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:25:237 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:25:237 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:25:238 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:25:873 DEBUG 47372 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:09:25:873 DEBUG 47372 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 2(Integer), 12(Long)
-15:09:25:879 DEBUG 47372 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:09:25:919 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:25:919 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:25:922 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:25:924 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:25:924 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:25:924 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (24ms)
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:25 GMT
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:25:949 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:25:950 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:25:950 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:27:117 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:09:27:117 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 2(Integer), 7(Long)
-15:09:27:120 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:09:27:140 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:27:141 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:27:144 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:27:145 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:27:145 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:27:145 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (19ms)
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:27 GMT
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:27:165 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:27:166 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:09:28:710 DEBUG 47372 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:09:28:711 DEBUG 47372 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 1(Integer), 14(Long)
-15:09:28:717 DEBUG 47372 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:09:28:743 DEBUG 47372 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:09:28:743 DEBUG 47372 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:09:28:746 DEBUG 47372 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:09:28:747 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:09:28:747 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:09:28:747 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (12ms)
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:09:28 GMT
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:09:28:760 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:09:28:761 DEBUG 47372 --- [http-nio-8082-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:10:09:515 DEBUG 47372 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:10:09:517 DEBUG 47372 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:10:09:527 DEBUG 47372 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 4
-15:10:09:529 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=14741770661&ids=100001905417 HTTP/1.1
-15:10:09:529 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:10:09:530 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (16ms)
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:10:09 GMT
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:10:09:546 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:10:09:547 DEBUG 47372 --- [http-nio-8082-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1569-byte body)
-15:10:19:043 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) AS total FROM cart WHERE (user_id = ? AND item_id = ?)
-15:10:19:043 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 3995643(Long)
-15:10:19:045 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-15:10:19:046 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) AS total FROM cart WHERE (user_id = ?)
-15:10:19:047 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
-15:10:19:048 DEBUG 47372 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-15:10:19:051 DEBUG 47372 --- [http-nio-8082-exec-8] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
-15:10:19:052 DEBUG 47372 --- [http-nio-8082-exec-8] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 3995643(Long), Apple iPhone 7 (A1660) 32G 黑色 移动联通电信4G手机(String), {"颜色": "黑色"}(String), 663300(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t3193/308/1586388837/134147/92414e51/57d0c55bNa8230260.jpg!q70.jpg.webp(String)
-15:10:19:077 DEBUG 47372 --- [http-nio-8082-exec-8] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
-15:10:19:496 DEBUG 47372 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:10:19:496 DEBUG 47372 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:10:19:501 DEBUG 47372 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 5
-15:10:19:502 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417 HTTP/1.1
-15:10:19:502 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:10:19:502 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (9ms)
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:10:19 GMT
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:10:19:512 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:10:19:513 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"3995643","name":"Apple iPhone 7 (A1660) 32G 黑色 移动联通电信4G手机","price":663300,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3193/308/1586388837/134147/92414e51/57d0c55bNa8230260.jpg!q70.jpg.webp","category":"手机","brand":"Apple","spec":"{\"颜色\": \"黑色\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:10:19:513 DEBUG 47372 --- [http-nio-8082-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1934-byte body)
-15:10:21:829 DEBUG 47372 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:10:21:829 DEBUG 47372 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 2(Integer), 15(Long)
-15:10:21:836 DEBUG 47372 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:10:21:861 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:10:21:861 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:10:21:864 DEBUG 47372 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 5
-15:10:21:865 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417 HTTP/1.1
-15:10:21:865 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:10:21:865 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (10ms)
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:10:21 GMT
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:10:21:875 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:10:21:876 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"3995643","name":"Apple iPhone 7 (A1660) 32G 黑色 移动联通电信4G手机","price":663300,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3193/308/1586388837/134147/92414e51/57d0c55bNa8230260.jpg!q70.jpg.webp","category":"手机","brand":"Apple","spec":"{\"颜色\": \"黑色\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:10:21:876 DEBUG 47372 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1934-byte body)
-15:10:22:159 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.updateById    : ==>  Preparing: UPDATE cart SET num=? WHERE id=?
-15:10:22:160 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.updateById    : ==> Parameters: 3(Integer), 15(Long)
-15:10:22:165 DEBUG 47372 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.updateById    : <==    Updates: 1
-15:10:22:178 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-15:10:22:180 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-15:10:22:182 DEBUG 47372 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 5
-15:10:22:183 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417 HTTP/1.1
-15:10:22:184 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-15:10:22:184 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (8ms)
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 07:10:22 GMT
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"3995643","name":"Apple iPhone 7 (A1660) 32G 黑色 移动联通电信4G手机","price":663300,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3193/308/1586388837/134147/92414e51/57d0c55bNa8230260.jpg!q70.jpg.webp","category":"手机","brand":"Apple","spec":"{\"颜色\": \"黑色\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-15:10:22:193 DEBUG 47372 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1934-byte body)
-15:44:22:527  WARN 47372 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-15:44:22:527  WARN 47372 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-15:44:22:528  WARN 47372 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-15:44:22:528  WARN 47372 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-15:44:22:570  INFO 47372 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-15:44:22:588  INFO 47372 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-15:44:22:604  INFO 47372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-15:44:22:621  INFO 47372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-15:44:31:991  INFO 40692 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-15:44:32:894  INFO 40692 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-15:44:33:462  INFO 40692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-15:44:33:473  INFO 40692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-15:44:33:473  INFO 40692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-15:44:33:628  INFO 40692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-15:44:33:630  INFO 40692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1627 ms
-15:44:33:874  INFO 40692 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-15:44:34:082  WARN 40692 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-15:44:34:087  INFO 40692 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-15:44:34:104  INFO 40692 --- [main] ConditionEvaluationReportLoggingListener : 
+08:51:56:058  INFO 50812 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+08:51:57:613  INFO 50812 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
+08:51:58:655  INFO 50812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+08:51:58:675  INFO 50812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+08:51:58:675  INFO 50812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+08:51:58:934  INFO 50812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+08:51:58:934  INFO 50812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2787 ms
+08:51:59:365  INFO 50812 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+08:52:00:430  INFO 50812 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+08:52:01:859  INFO 50812 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+08:52:02:517  INFO 50812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+08:52:02:538  INFO 50812 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+08:52:02:538  INFO 50812 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+08:52:02:704  INFO 50812 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.31.64:8082 register finished
+08:52:03:200  INFO 50812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+08:52:03:203  INFO 50812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+08:52:03:230  INFO 50812 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+08:52:03:346  INFO 50812 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 12.11 seconds (JVM running for 13.54)
+08:52:03:362  INFO 50812 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+08:52:03:365  INFO 50812 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+08:52:03:366  INFO 50812 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+17:01:56:561  WARN 50812 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:01:56:571  WARN 50812 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:01:56:564  WARN 50812 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:01:56:581  WARN 50812 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:01:56:686  INFO 50812 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:01:56:693  INFO 50812 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:02:29:318  INFO 66304 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+17:02:30:373  INFO 66304 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02f6ed28-e071-3a56-a5c0-b6e5614ea27d
+17:02:30:464  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:465  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:465  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:514  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:517  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:520  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:521  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$584/0x000001e4015f2070] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:521  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:525  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:528  INFO 66304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:02:30:530  INFO 66304 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+17:02:30:594  INFO 66304 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:02:30:602  INFO 66304 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+17:02:31:037  INFO 66304 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+17:02:31:135  INFO 66304 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:02:31:163  INFO 66304 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:02:31:164  INFO 66304 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:02:31:479  INFO 66304 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.92.100:8099
+17:02:31:536  INFO 66304 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.92.100:8099,msg:< RegisterTMRequest{applicationId='cart-service', transactionServiceGroup='hmall'} >
+17:02:31:722  WARN 66304 --- [NettyClientSelector_TMROLE_1_1] ServiceLoader$InnerEnhancedServiceLoader : Load [io.seata.serializer.hessian.HessianSerializer] class fail. com/caucho/hessian/io/AbstractHessianOutput
+17:02:31:742  INFO 66304 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.6.1, server version:1.5.2,channel:[id: 0x58a05000, L:/192.168.92.1:4517 - R:/192.168.92.100:8099]
+17:02:31:745  INFO 66304 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 45 ms, version:1.5.2,role:TMROLE,channel:[id: 0x58a05000, L:/192.168.92.1:4517 - R:/192.168.92.100:8099]
+17:02:31:746  INFO 66304 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[cart-service] txServiceGroup[hmall]
+17:02:31:755  INFO 66304 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+17:02:31:757  INFO 66304 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+17:02:31:762  INFO 66304 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+17:02:31:762  INFO 66304 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[cart-service] txServiceGroup[hmall]
+17:02:31:762  INFO 66304 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+17:02:32:397  INFO 66304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+17:02:32:415  INFO 66304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:02:32:416  INFO 66304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+17:02:32:645  INFO 66304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+17:02:32:645  INFO 66304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3311 ms
+17:02:32:927  INFO 66304 --- [main] c.s.f.SeataFeignBuilderBeanPostProcessor : change the retryer of the bean 'feignSentinelBuilder' to 'Retryer.NEVER_RETRY'
+17:02:32:933  INFO 66304 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+17:02:33:383  INFO 66304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:02:33:654  INFO 66304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:02:33:668  INFO 66304 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.92.100:8099
+17:02:33:669  INFO 66304 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.92.100:3306/hm-cart
+17:02:33:669  INFO 66304 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.92.100:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.92.100:3306/hm-cart', applicationId='cart-service', transactionServiceGroup='hmall'} >
+17:02:33:678  INFO 66304 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.6.1, server version:1.5.2,channel:[id: 0xa842715a, L:/192.168.92.1:4520 - R:/192.168.92.100:8099]
+17:02:33:679  INFO 66304 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 6 ms, version:1.5.2,role:RMROLE,channel:[id: 0xa842715a, L:/192.168.92.1:4520 - R:/192.168.92.100:8099]
+17:02:34:160  INFO 66304 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+17:02:35:177  INFO 66304 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:02:35:722  INFO 66304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+17:02:35:726  INFO 66304 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:02:35:726  INFO 66304 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:02:35:861  INFO 66304 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.31.64:8082 register finished
+17:02:36:248  INFO 66304 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:02:36:252  INFO 66304 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:02:36:288  INFO 66304 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:02:36:402  INFO 66304 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 11.371 seconds (JVM running for 13.075)
+17:02:36:410  INFO 66304 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+17:02:36:412  INFO 66304 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+17:02:36:413  INFO 66304 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+17:03:53:364  INFO 66304 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:03:53:364  INFO 66304 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:03:53:367  INFO 66304 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+17:03:53:866 DEBUG 66304 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+17:03:53:890 DEBUG 66304 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+17:03:53:928 DEBUG 66304 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 5
+17:03:54:008 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417 HTTP/1.1
+17:03:54:008 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+17:03:54:008 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+17:03:54:704 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 500  (696ms)
+17:03:54:705 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: close
+17:03:54:705 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+17:03:54:705 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Wed, 13 May 2026 09:03:54 GMT
+17:03:54:705 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+17:03:54:705 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+17:03:54:707 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] {"timestamp":"2026-05-13T09:03:54.655+00:00","status":500,"error":"Internal Server Error","path":"/items"}
+17:03:54:707 DEBUG 66304 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (106-byte body)
+17:03:54:722 ERROR 66304 --- [http-nio-8082-exec-1] c.h.a.c.fallback.ItemClientFallback      : 远程调用ItemClient#queryItemByIds方法出现异常，参数：[8533120, 100000006163, 3995643, 14741770661, 100001905417]
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15:44:34:128 ERROR 40692 --- [main] o.s.boot.SpringApplication               : Application run failed
+feign.FeignException$InternalServerError: [500 ] during [GET] to [http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417] [ItemClient#queryItemByIds(Collection)]: [{"timestamp":"2026-05-13T09:03:54.655+00:00","status":500,"error":"Internal Server Error","path":"/items"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:250) ~[feign-core-11.10.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:197) ~[feign-core-11.10.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:185) ~[feign-core-11.10.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-11.10.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:98) ~[feign-core-11.10.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:141) ~[feign-core-11.10.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:91) ~[feign-core-11.10.jar:na]
+	at com.alibaba.cloud.sentinel.feign.SentinelInvocationHandler.invoke(SentinelInvocationHandler.java:109) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy153.queryItemByIds(Unknown Source) ~[na:na]
+	at com.hmall.cart.service.impl.CartServiceImpl.handleCartItems(CartServiceImpl.java:111) ~[classes/:na]
+	at com.hmall.cart.service.impl.CartServiceImpl.queryMyCarts(CartServiceImpl.java:79) ~[classes/:na]
+	at com.hmall.cart.service.impl.CartServiceImpl$$FastClassBySpringCGLIB$$7813828f.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.31.jar:5.3.31]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.31.jar:5.3.31]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.31.jar:5.3.31]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-5.3.31.jar:5.3.31]
+	at com.hmall.cart.service.impl.CartServiceImpl$$EnhancerBySpringCGLIB$$51734e17.queryMyCarts(<generated>) ~[classes/:na]
+	at com.hmall.cart.controller.CartController.queryMyCarts(CartController.java:56) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.83.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.31.jar:5.3.31]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.83.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.31.jar:5.3.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.83.jar:9.0.83]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
-	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.getFromContext(SentinelFeign.java:143) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.create(SentinelFeign.java:106) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:64) ~[feign-core-11.10.jar:na]
-	at feign.Feign$Builder.target(Feign.java:205) ~[feign-core-11.10.jar:na]
-	at org.springframework.cloud.openfeign.DefaultTargeter.target(DefaultTargeter.java:30) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:379) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:427) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:402) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:235) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 42 common frames omitted
-
-15:44:34:129  WARN 40692 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-15:44:34:130  WARN 40692 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-15:44:34:130  WARN 40692 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-15:45:10:255  INFO 23940 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-15:45:11:030  INFO 23940 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-15:45:11:683  INFO 23940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-15:45:11:695  INFO 23940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-15:45:11:696  INFO 23940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-15:45:11:852  INFO 23940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-15:45:11:853  INFO 23940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1580 ms
-15:45:12:105  INFO 23940 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-15:45:12:318  WARN 23940 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-15:45:12:321  INFO 23940 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-15:45:12:335  INFO 23940 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15:45:12:354 ERROR 23940 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
-	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.getFromContext(SentinelFeign.java:143) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.create(SentinelFeign.java:106) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:64) ~[feign-core-11.10.jar:na]
-	at feign.Feign$Builder.target(Feign.java:205) ~[feign-core-11.10.jar:na]
-	at org.springframework.cloud.openfeign.DefaultTargeter.target(DefaultTargeter.java:30) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:379) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:427) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:402) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:235) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 42 common frames omitted
-
-15:45:12:356  WARN 23940 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-15:45:12:356  WARN 23940 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-15:45:12:356  WARN 23940 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-15:45:12:356  WARN 23940 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-15:45:40:041  INFO 66556 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-15:45:40:934  INFO 66556 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-15:45:41:475  INFO 66556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-15:45:41:484  INFO 66556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-15:45:41:484  INFO 66556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-15:45:41:628  INFO 66556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-15:45:41:628  INFO 66556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1567 ms
-15:45:41:910  INFO 66556 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-15:45:42:171  WARN 66556 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-15:45:42:174  INFO 66556 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-15:45:42:189  INFO 66556 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15:45:42:212 ERROR 66556 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
-	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.getFromContext(SentinelFeign.java:143) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.create(SentinelFeign.java:106) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:64) ~[feign-core-11.10.jar:na]
-	at feign.Feign$Builder.target(Feign.java:205) ~[feign-core-11.10.jar:na]
-	at org.springframework.cloud.openfeign.DefaultTargeter.target(DefaultTargeter.java:30) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:379) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:427) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:402) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:235) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 42 common frames omitted
-
-15:45:42:214  WARN 66556 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-15:45:42:214  WARN 66556 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-15:45:42:214  WARN 66556 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-15:45:42:215  WARN 66556 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-15:55:14:594  INFO 15540 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-15:55:15:592  INFO 15540 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-15:55:16:168  INFO 15540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-15:55:16:178  INFO 15540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-15:55:16:179  INFO 15540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-15:55:16:308  INFO 15540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-15:55:16:308  INFO 15540 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1695 ms
-15:55:16:522  INFO 15540 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-15:55:16:714  WARN 15540 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-15:55:16:717  INFO 15540 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-15:55:16:730  INFO 15540 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-15:55:16:752 ERROR 15540 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591) ~[spring-context-5.3.31.jar:5.3.31]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar:2.7.18]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar:2.7.18]
-	at com.hmall.cart.CartApplication.main(CartApplication.java:16) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [D:\codeJava\itheimaProjects\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.hmall.api.client.ItemClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 33 common frames omitted
-Caused by: java.lang.IllegalStateException: Incompatible fallback instance. Fallback/fallbackFactory of type class com.hmall.api.client.fallback.ItemClientFallback is not assignable to interface com.hmall.api.client.ItemClient for feign client item-service
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.getFromContext(SentinelFeign.java:143) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at com.alibaba.cloud.sentinel.feign.SentinelFeign$Builder$1.create(SentinelFeign.java:106) ~[spring-cloud-starter-alibaba-sentinel-2021.0.5.0.jar:2021.0.5.0]
-	at feign.ReflectiveFeign.newInstance(ReflectiveFeign.java:64) ~[feign-core-11.10.jar:na]
-	at feign.Feign$Builder.target(Feign.java:205) ~[feign-core-11.10.jar:na]
-	at org.springframework.cloud.openfeign.DefaultTargeter.target(DefaultTargeter.java:30) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:379) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:427) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:402) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:235) ~[spring-cloud-openfeign-core-3.1.5.jar:3.1.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1249) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.31.jar:5.3.31]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.31.jar:5.3.31]
-	... 42 common frames omitted
-
-15:55:16:754  WARN 15540 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-15:55:16:754  WARN 15540 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-15:55:16:754  WARN 15540 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-15:55:16:755  WARN 15540 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:01:46:760  INFO 28132 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-16:01:47:598  INFO 28132 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-16:01:48:128  INFO 28132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-16:01:48:138  INFO 28132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:01:48:138  INFO 28132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:01:48:299  INFO 28132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:01:48:300  INFO 28132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1517 ms
-16:01:48:540  INFO 28132 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:01:49:150  INFO 28132 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-16:01:50:167  INFO 28132 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:01:50:624  INFO 28132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-16:01:50:636  INFO 28132 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-16:01:50:636  INFO 28132 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-16:01:50:781  INFO 28132 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.31.64:8082 register finished
-16:01:51:135  INFO 28132 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:01:51:138  INFO 28132 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:01:51:168  INFO 28132 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:01:51:292  INFO 28132 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 8.174 seconds (JVM running for 9.337)
-16:01:51:310  INFO 28132 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
-16:01:51:313  INFO 28132 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
-16:01:51:315  INFO 28132 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
-16:02:33:253  INFO 47192 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-16:02:34:395  INFO 47192 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-16:02:35:014  INFO 47192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-16:02:35:025  INFO 47192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:02:35:026  INFO 47192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:02:35:196  INFO 47192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:02:35:197  INFO 47192 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1926 ms
-16:02:35:504  INFO 47192 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:02:36:377  INFO 47192 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-16:02:37:481  INFO 47192 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:02:38:092  WARN 47192 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8082 is already in use
-16:02:38:102  INFO 47192 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-16:02:38:117  INFO 47192 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-16:02:38:138 ERROR 47192 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8082 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
-
-16:02:38:140  WARN 47192 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:02:38:140  WARN 47192 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:02:38:141  WARN 47192 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:02:38:141  WARN 47192 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:03:34:490  INFO 56964 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-16:03:35:589  INFO 56964 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-16:03:36:319  INFO 56964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-16:03:36:331  INFO 56964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:03:36:331  INFO 56964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:03:36:471  INFO 56964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:03:36:471  INFO 56964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1959 ms
-16:03:36:699  INFO 56964 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:03:37:375  INFO 56964 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-16:03:38:420  INFO 56964 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:03:39:041  WARN 56964 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8082 is already in use
-16:03:39:052  INFO 56964 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-16:03:39:066  INFO 56964 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-16:03:39:087 ERROR 56964 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8082 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
-
-16:03:39:088  WARN 56964 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:03:39:088  WARN 56964 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:03:39:089  WARN 56964 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:03:55:396  WARN 28132 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:03:55:396  WARN 28132 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:03:55:397  WARN 28132 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:03:55:398  WARN 28132 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:03:55:453  INFO 28132 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-16:03:55:460  INFO 28132 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-16:05:03:275  INFO 31700 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-16:05:04:752  INFO 31700 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-16:05:05:779  INFO 31700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-16:05:05:796  INFO 31700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:05:05:796  INFO 31700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:05:06:023  INFO 31700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:05:06:024  INFO 31700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2718 ms
-16:05:06:493  INFO 31700 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:05:07:924  INFO 31700 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-16:05:09:877  INFO 31700 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:05:10:890  INFO 31700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-16:05:10:909  INFO 31700 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-16:05:10:910  INFO 31700 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-16:05:11:076  INFO 31700 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.31.64:8082 register finished
-16:05:11:787  INFO 31700 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:05:11:791  INFO 31700 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:05:11:840  INFO 31700 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:05:12:000  INFO 31700 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 13.291 seconds (JVM running for 14.42)
-16:05:12:023  INFO 31700 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
-16:05:12:027  INFO 31700 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
-16:05:12:029  INFO 31700 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
-16:06:00:370  INFO 31700 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-16:06:00:370  INFO 31700 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-16:06:00:373  INFO 31700 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-16:06:00:785  INFO 31700 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-16:06:01:152  INFO 31700 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-16:06:01:162 DEBUG 31700 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-16:06:01:204 DEBUG 31700 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-16:06:01:262 DEBUG 31700 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 5
-16:06:01:347 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417 HTTP/1.1
-16:06:01:348 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-16:06:01:348 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-16:06:02:417 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (1068ms)
-16:06:02:418 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-16:06:02:418 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-16:06:02:418 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 08:06:02 GMT
-16:06:02:419 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-16:06:02:419 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-16:06:02:419 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-16:06:02:421 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"3995643","name":"Apple iPhone 7 (A1660) 32G 黑色 移动联通电信4G手机","price":663300,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3193/308/1586388837/134147/92414e51/57d0c55bNa8230260.jpg!q70.jpg.webp","category":"手机","brand":"Apple","spec":"{\"颜色\": \"黑色\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-16:06:02:421 DEBUG 31700 --- [http-nio-8082-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1934-byte body)
-16:06:05:076 DEBUG 31700 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-16:06:05:077 DEBUG 31700 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-16:06:05:083 DEBUG 31700 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 5
-16:06:05:084 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=100000006163&ids=3995643&ids=14741770661&ids=100001905417 HTTP/1.1
-16:06:05:086 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-16:06:05:086 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-16:06:06:004 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (917ms)
-16:06:06:004 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-16:06:06:004 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-16:06:06:005 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 12 May 2026 08:06:06 GMT
-16:06:06:005 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-16:06:06:005 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-16:06:06:005 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-16:06:06:006 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"3995643","name":"Apple iPhone 7 (A1660) 32G 黑色 移动联通电信4G手机","price":663300,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3193/308/1586388837/134147/92414e51/57d0c55bNa8230260.jpg!q70.jpg.webp","category":"手机","brand":"Apple","spec":"{\"颜色\": \"黑色\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2},{"id":"100001905417","name":"【千玺代言】华为新品 HUAWEI nova 4 极点全面屏手机 2000万超广角三摄 8GB+128GB 蜜语红 全网通双卡双待","price":224900,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/20085/14/1076/149604/5c0f8dd2Ebafd3bfd/0cb34a7826cbe1c3.jpg!q70.jpg.webp","category":"手机","brand":"华为","spec":"{\"颜色\": \"红色\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-16:06:06:006 DEBUG 31700 --- [http-nio-8082-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (1934-byte body)
-16:11:52:972  INFO 63820 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-16:11:54:538  INFO 63820 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7ff0cc17-c314-3dbc-a212-e794400cf70a
-16:11:55:713  INFO 63820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-16:11:55:729  INFO 63820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:11:55:729  INFO 63820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-16:11:55:951  INFO 63820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:11:55:952  INFO 63820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2949 ms
-16:11:56:358  INFO 63820 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:11:57:699  INFO 63820 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-16:11:59:612  INFO 63820 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:12:00:719  INFO 63820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-16:12:00:743  INFO 63820 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-16:12:00:743  INFO 63820 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-16:12:00:913  INFO 63820 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.31.64:8082 register finished
-16:12:01:584  INFO 63820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:12:01:589  INFO 63820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:12:01:632  INFO 63820 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:12:01:806  INFO 63820 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 13.361 seconds (JVM running for 14.654)
-16:12:01:840  INFO 63820 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
-16:12:01:848  INFO 63820 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
-16:12:01:855  INFO 63820 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
-16:37:59:137  WARN 63820 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:37:59:137  WARN 63820 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:37:59:138  WARN 63820 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:37:59:138  WARN 63820 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:37:59:203  INFO 63820 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-16:37:59:212  INFO 63820 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:04:57:556  WARN 66304 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:04:57:556  WARN 66304 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:04:57:557  WARN 66304 --- [Thread-7] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:04:57:558  WARN 66304 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:04:57:589  INFO 66304 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:04:57:595  INFO 66304 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:04:57:608  INFO 66304 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:04:57:620  INFO 66304 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:04:57:627  INFO 66304 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x58a05000, L:/192.168.92.1:4517 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x58a05000, L:/192.168.92.1:4517 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x58a05000, L:/192.168.92.1:4517 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x58a05000, L:/192.168.92.1:4517 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x58a05000, L:/192.168.92.1:4517 ! R:/192.168.92.100:8099]) will closed
+17:04:57:627  INFO 66304 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x58a05000, L:/192.168.92.1:4517 ! R:/192.168.92.100:8099]) will closed
+17:04:57:627  INFO 66304 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xa842715a, L:/192.168.92.1:4520 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xa842715a, L:/192.168.92.1:4520 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xa842715a, L:/192.168.92.1:4520 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xa842715a, L:/192.168.92.1:4520 ! R:/192.168.92.100:8099]
+17:04:57:627  INFO 66304 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xa842715a, L:/192.168.92.1:4520 ! R:/192.168.92.100:8099]) will closed
+17:04:57:627  INFO 66304 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xa842715a, L:/192.168.92.1:4520 ! R:/192.168.92.100:8099]) will closed
